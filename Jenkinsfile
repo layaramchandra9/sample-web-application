@@ -12,7 +12,7 @@ pipeline{
               stage('Quality Gate Status Check'){
                   steps{
                       script{
-			      withSonarQubeEnv('sonarserver') { 
+			      withSonarQubeEnv('sonarcubeserver') { 
 			      sh "mvn sonar:sonar"
                        	     	}
 			      timeout(time: 1, unit: 'HOURS') {
